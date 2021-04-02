@@ -38,7 +38,7 @@ def main():
         cv2.polylines(frame, [roi.astype(int)], True, (0,255,0), 2)
 
         # Stacking all images
-        result = frame_edit.imageStacking(frame, wrapped_img, sliding_windows, lines, projected_lane)
+        result = frame_edit.imageStacking(frame, wrapped_img, sliding_windows, lines, projected_lane)      
         cv2.imshow('Result', result)
 
         if cv2.waitKey(1) & 0xFF == ord('q'):

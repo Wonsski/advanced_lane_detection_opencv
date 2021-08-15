@@ -23,3 +23,12 @@ For changing video source just change this line in main.py
 ```sh
 cap = cv2.VideoCapture('VIDEO_FILENAME.mp4')
 ```
+Then set a region of interest where the lane is located
+```sh
+roi = np.float32([
+    (580, 450), # Top-left 
+    (275, 675), # Bottom-left 
+    (1130, 675), # Bottom-right 
+    (690, 450) # Top-right 
+])
+```
